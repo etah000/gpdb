@@ -84,6 +84,9 @@ CATALOG(pg_class,1259,RelationRelationId) BKI_BOOTSTRAP BKI_ROWTYPE_OID(83,Relat
 	/* number of user attributes */
 	int16		relnatts;
 
+	/* number of tablets */
+	int16 		relnsplits;
+
 	/*
 	 * Class pg_attribute must contain exactly "relnatts" user attributes
 	 * (with attnums ranging from 1 to relnatts) for this class.  It may also
