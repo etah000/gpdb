@@ -71,6 +71,7 @@
 #include "catalog/pg_subscription.h"
 #include "catalog/pg_subscription_rel.h"
 #include "catalog/pg_tablespace.h"
+#include "catalog/pg_tablet_state.h"
 #include "catalog/pg_transform.h"
 #include "catalog/pg_ts_config.h"
 #include "catalog/pg_ts_config_map.h"
@@ -876,6 +877,17 @@ static const struct cachedesc cacheinfo[] = {
 			0,
 		},
 		4
+	},
+	{TabletStateRelationId,		/* TABLETSEGMENT */
+			TabletStateRelidTabletIdIndexId,
+			2,
+			{
+				Anum_pg_tablet_state_table_id,
+				Anum_pg_tablet_state_tablet_id,
+				0,
+				0,
+			},
+			4
 	},
 	{TransformRelationId,		/* TRFOID */
 		TransformOidIndexId,

@@ -450,4 +450,7 @@ DECLARE_UNIQUE_INDEX(pg_subscription_rel_srrelid_srsubid_index, 6117, on pg_subs
 DECLARE_UNIQUE_INDEX(gp_partition_template_relid_level_index, 5023, on gp_partition_template using btree(relid oid_ops, level int2_ops));
 #define GpPartitionTemplateRelidLevelIndexId  5023
 
+DECLARE_UNIQUE_INDEX(pg_tablet_state_relid_tabletid_index, 7170, on pg_tablet_state using btree(table_id oid_ops, tablet_id int2_ops));
+#define TabletStateRelidTabletIdIndexId  7170
+
 #endif							/* INDEXING_H */
